@@ -16,7 +16,11 @@ var userTemplate = function(users) {
   return `<div class="user-data">
   <img src="${users.picture.large}"></img>
    <span class="name"><p>${nameCaps}</p></span>
-   <div class="email">${users.email}</div>
+   <div class="email">${users.email.toUpperCase()}</div>
+   <div class="address">${users.location.street}</div>
+   <div class="address">${users.location.city}, ${users.location.state}, ${users.location.postcode} </div>
+   <div class="phone">${users.phone}</div>
+   <div class="ssn">${users.id.value}</div>
    </div>`
 }
 
